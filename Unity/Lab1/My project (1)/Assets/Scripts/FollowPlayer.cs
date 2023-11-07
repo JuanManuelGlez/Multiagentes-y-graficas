@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <Summary>
+/// This class will move the camera to follow the player
+/// </Summary>
+
 public class FollowPlayer : MonoBehaviour
 {
     public GameObject player;
@@ -15,6 +19,7 @@ public class FollowPlayer : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        // Camera follows the player with specified offset position
         transform.position = player.transform.position + offset;
     }
 }
